@@ -10,13 +10,14 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 
-//= require jquery
-//= require jquery_ujs
-//= require bootstrap
-//= require turbolinks 
+//= require rails-ujs
+//= require turbolinks
 //= require_tree .
+//= require jquery3
+// require popper
+// require bootstrap-sprockets
 
-$(document).ready(function(){
+$(document).on("turbolinks:load", function(){
     // Add smooth scrolling to all links in navbar + footer link
     $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
       // Make sure this.hash has a value before overriding default behavior
