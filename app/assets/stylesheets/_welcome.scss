@@ -4,10 +4,8 @@ body {
     line-height: 1.8;
     color: #818181;
     font-family: 'Muli', sans-serif;
-    margin: 0px important; 
-    
+    margin: 0px important;   
 }
-
 
 #el {   
     background-repeat: no-repeat;
@@ -157,7 +155,6 @@ h4 {
 .box{
     background-color: white;
     padding: 0 20px 20px 20px;
-  
    
 }
 .gitbox{
@@ -173,8 +170,6 @@ h4 {
     // padding: 40px 0px 40px 0px;
 }
     
-
-
 .icon1{
     color:rgb(131, 129, 129);
     //text-align:centre;
@@ -191,7 +186,6 @@ h4 {
    padding:30px 30px 20px 105px;
    opacity:0.8;
 }
-
 
 .icon2{
     color:rgb(131, 129, 129);
@@ -234,15 +228,14 @@ h4 {
     height: 100%;
     margin-bottom: 10px;
 }
-
+//--skils---
    .icon {
     max-width: 5em;
   }
-   
-   
   .icon path {
     fill:  #818181;
   } 
+
 
 .slideanim {visibility:hidden;}
 .slide {
@@ -273,21 +266,23 @@ h4 {
       -webkit-transform: translateY(0%);
     }
   }
-  @media screen and (max-width: 768px) {
-    .col-sm-4 {
-      text-align: center;
-      margin: 25px 0;
-    }
-    .btn-lg {
-        width: 100%;
-        margin-bottom: 35px;
-    }
-  }
-  @media screen and (max-width: 480px) {
-    .logo {
-        font-size: 150px;
-    }
-  }
+ 
+//   @media screen and (max-width: 768px) {
+//     .col-sm-4 {
+//       text-align: center;
+//       margin: 25px 0;
+//     }
+//     .btn-lg {
+//         width: 100%;
+//         margin-bottom: 35px;
+//     }
+//   }
+
+//   @media screen and (max-width: 480px) {
+//     .logo {
+//         font-size: 150px;
+//     }
+//   }
 
 
 
