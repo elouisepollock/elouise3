@@ -56,5 +56,3 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
-gem 'rails_12factor', group: :production
-#el added !!! alternative to config.serve_static_assets = true in application.rb
