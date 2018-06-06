@@ -83,3 +83,5 @@ production:
   database: elouise3_production
   username: elouise3
   password: <%= ENV['ELOUISE3_DATABASE_PASSWORD'] %>
+
+  
