@@ -1,24 +1,58 @@
 
- <div class:"container-fluid newform" >
- <%= form_for @contact do |f| %>
- <% if flash[:error].present? %>
- <p> flash[:error]</p>
- <% end %>
- <%= f.label :name %> <br>
- <%= f.text_field :name, required: true %>
-<br>
- <%= f.label :email %> <br>
- <%= f.text_field :email, required: true %>
-<br>
- <%= f.label :message %> <br>
- <%= f.text_area :message, as: :text %>
-<br>
-<div class="hidden">
-<%= f.label :nickname %> <br>
- <%= f.text_field :nickname  %>
- </div>
-<br>
-<br>
- <%= f.submit 'Send Message', class: 'btn btn-primary' %>
- <% end %>
 </div>
+  <div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">Contact</h2><br>
+
+  <div class="row">
+     <div class="col-sm-3">
+      <div class="gitbox">
+     
+  <%= link_to "https://www.linkedin.com/in/elouise-pollock/" do %> 
+    <i class="fab fa-linkedin fa-7x icon1"></i>
+   <% end %> 
+
+  <%= link_to "https://github.com/elouisepollock" do %>
+     <i class="fab fa-github fa-7x icon2"></i>
+   <% end %>
+   
+      </div>
+    </div>
+
+    <div class="col-sm-9 slideanim">
+    
+      <div class="row">
+      <p class=sentence>Feel free to get in touch for more information.</p> <br>
+         <%= form_for @contact do |f| %>
+         <% if flash[:error].present? %>
+         <p> flash[:error]</p>
+         <% end %>
+         
+        <div class="col-sm-6 ">
+           <%= f.label :name %> <br>
+           <%= f.text_field :name, required: true %>
+        </div>
+
+
+        <div class="col-sm-6 ">
+           <%= f.label :email %> <br>
+           <%= f.text_field :email, required: true %>
+        </div>
+
+      </div>
+
+        <div class="col-sm-12 ">
+           <%= f.label :message %> <br>
+           <%= f.text_area :message, as: :text %> <br>
+        </div>
+
+        <div class="row">
+        <div class="col-sm-12 form-group">
+            <%= f.submit 'Send Message', class: 'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+ <% end %>
+
