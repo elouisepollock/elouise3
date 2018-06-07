@@ -193,14 +193,14 @@
          <% end %>
          
         <div class="col-sm-6 name_f ">
-           <%= f.label :name %> <br>
-           <%= f.text_field :name, required: true %>
+          
+           <%= f.text_field :name, required: true, size: "61x2", placeholder: "name" %>
         </div>
 
 
-        <div class="col-sm-6 email_f">
-           <%= f.label :email %> <br>
-           <%= f.text_field :email, required: true %>
+        <div class="col-sm-6 email_f" >
+          
+           <%= f.text_field :email, required: true, size: "61x2", placeholder: "email"%>
         </div>
 
       </div>
@@ -208,13 +208,16 @@
        <div class="row">
        <br>
         <div id="contactme2" class="col-sm-12 message_f">
-           <%= f.label :message %> <br>
-           <%= f.text_area :message, :size => "131x2" %>
+          
+           <%= f.text_area :message, :size => "131x2", placeholder: "message" %>
         </div>
         
 
         <div class="row button">
-        <div class="col-sm-12 ">
+         <div class="col-sm-9 ">
+         </div>
+
+        <div class="col-sm-3 ">
             <%= f.submit 'Send Message', class: 'btn btn-default' %>
         </div>
         </div>
