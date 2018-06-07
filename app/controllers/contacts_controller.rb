@@ -5,17 +5,19 @@ class ContactsController < ApplicationController
      @contact = Contact.new
     end
 
-    def create
-       @contact = Contact.new(params[:contact])
-       @contact.request = request
-       if @contact.deliver
-       flash.now[:error] = nil
-       #next line not in vid tute
-       #redirect_to root_path, notice: ‘Message sent successfully’
-       else
-       flash.now[:error] = ‘Cannot send message’
-       render :new
-       end
+
+
+def create
+    begin
+      @contact = Contact.new(params[:contact_form])
+      @contact.request = request
+      if @contact.deliver
+        flash.now[:notice] = 'Thank you for your message!'
+      else
+        render :new
+      end
+    rescue ScriptError
+      flash[:error] = 'Sorry, this message appears to be spam and was not delivered.'
     end
-    
+  end
 end

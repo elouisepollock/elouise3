@@ -160,7 +160,7 @@
 
 
 
-<!--contact -->
+<!--contact git and linked in -->
 </div>
   <div id="contact" class="container-fluid bg-grey">
   <h2 class="text-center">Contact</h2><br>
@@ -180,36 +180,43 @@
       </div>
     </div>
 
-    <div class="col-sm-9 slideanim">
+
+<!--contact email me-->
+
+    <div id="contactme1" class="col-sm-9 slideanim ">
     
       <div class="row">
-      <p class=sentence>Feel free to get in touch for more information.</p> <br>
+      <p class="sentence">Feel free to get in touch for more information.</p> <br>
          <%= form_for @contact do |f| %>
          <% if flash[:error].present? %>
          <p> flash[:error]</p>
          <% end %>
          
-        <div class="col-sm-6 ">
+        <div class="col-sm-6 name_f ">
            <%= f.label :name %> <br>
            <%= f.text_field :name, required: true %>
         </div>
 
 
-        <div class="col-sm-6 ">
+        <div class="col-sm-6 email_f">
            <%= f.label :email %> <br>
            <%= f.text_field :email, required: true %>
         </div>
 
       </div>
-
-        <div class="col-sm-12 ">
+       
+       <div class="row">
+       <br>
+        <div id="contactme2" class="col-sm-12 message_f">
            <%= f.label :message %> <br>
-           <%= f.text_area :message, as: :text %> <br>
+           <%= f.text_area :message, :size => "131x2" %>
         </div>
+        
 
-        <div class="row">
-        <div class="col-sm-12 form-group">
-            <%= f.submit 'Send Message', class: 'btn btn-primary' %>
+        <div class="row button">
+        <div class="col-sm-12 ">
+            <%= f.submit 'Send Message', class: 'btn btn-default' %>
+        </div>
         </div>
       </div>
     </div>
